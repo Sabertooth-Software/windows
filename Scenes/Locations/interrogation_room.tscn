@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cev3ie11q8j4w"]
+
+[ext_resource type="PackedScene" uid="uid://chw38fdragyxw" path="res://Assets/Maps/InterrogationRoom.blend" id="1_5istc"]
+
+[sub_resource type="Environment" id="Environment_4aoag"]
+sdfgi_enabled = true
+
+[node name="InterrogationRoom" instance=ExtResource("1_5istc")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(1, 1, 0.0705882, 1)
+distance_fade_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." index="4"]
+transform = Transform3D(-0.986856, -0.0571229, 0.151171, 0, 0.935444, 0.353475, -0.161604, 0.348829, -0.923148, 0, 1.42857, -1.10916)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="5"]
+environment = SubResource("Environment_4aoag")
